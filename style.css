@@ -6,7 +6,6 @@ h2 {
 	margin: 0;
 	text-align: center;
 }
-
 .bi, h1 {
 	font-size: 2rem;
 	color: #02bae8;
@@ -19,20 +18,18 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 5px 0 #02bae8;
-}
-.container {
     display: flex;
     padding: 15px calc(50% - 500px);
 	text-align: center;
 }
 
 img:not(:hover) {
-  transition: 2s;
-  filter: saturate(0%);
-  -webkit-filter: saturate(0%);
-  }
+	transition: 2s;
+	filter: saturate(0%);
+	-webkit-filter: saturate(0%);
+}
 img:hover {
-  transition: 1s;
+	transition: 1s;
 }
 
 .logo-img {
@@ -48,7 +45,7 @@ main.container {
     padding-bottom: 50px;
 }
 
-.wrapper	{
+.wrapper {
 	min-height: 100vh;
     /* background-color: beige; */
 	padding: 30px;
@@ -114,14 +111,25 @@ main.container {
     /* background-size: contain; */
     background-size: auto 80%;
 }
-
+button {
+    background: #02bae8;
+    color: #fff;
+    border: 1px;
+	border-radius: 3px;
+    width: 120px;
+    height: 30px;
+}
+button:hover {
+    color: #ffb3bf;
+	font-weight: bold;
+}
 .btn {
     outline: none;
     border: none;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #007aff;
+    background-color: #02bae8;
     color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
@@ -174,11 +182,18 @@ form {
 	margin-top: 16px;
 	gap: 8px;
 }
-
-input {
+input, textarea {
 	width: 100%;
 	box-sizing: border-box;
 	height: 30px;
+	border: 2px solid #02bae8;
+	border-radius: 3px;
+	outline: none;
+}
+input[type="checkbox" i] {
+    margin: 5px 10px 5px 0px;
+    width: 15px;
+    height: 15px;
 }
 
 .preview {
@@ -191,5 +206,8 @@ input {
 }
 
 footer {
+    display: flex;
+    padding: 30px calc(50% - 500px);
+	text-align: center;
     box-shadow: 0 0 5px 0 #02bae8;
 }

@@ -26,43 +26,54 @@
 	<div class="wrapper"></div>
 
 	<div class="modal-block">
-			<div class="modal">
-				<button class="modal-close btn">
-					<i class="fa-regular fa-circle-xmark"></i>
+		<div class="modal">
+			<button class="modal-close btn">
+				<i class="fa-regular fa-circle-xmark"></i>
 			</button>
-					<h2>Добавить котика</h2>
-					<form id="add">
-						<!-- <div>
-						<input type="number" name="id" placeholder="ID кота" required>
-					</div> -->
-					<div>
-						<input type="text" name="name" placeholder="Имя котика" > 
-					</div>
-					<div>		
-						<input type="number" name="age" placeholder="Возраст" min="0" max="20">
-					</div>
-					<div>
-						<input type="text" name="image" placeholder="Ссылка на фото">
-					</div>
-					<div class="preview"></div>
-					<div>
-						<label>
-						<input type="checkbox" name="favorite">Любимец</label>
-					</div>
-					<div>
-						<input type="number" name="rate" placeholder="Рейтинг" min="0" max="5">
-					</div>
-						<textarea name="description" placeholder="Описание"></textarea>
-						<button type="submit">Добавить</button>
-				</form>
-			</div>
-	</div>	</div>
+				<h2>Добавить котика</h2>
+				<form id="add">
+					<!-- <div>
+					<input type="number" name="id" placeholder="ID кота" required>
+				</div> -->
+				<div>
+					<input type="text" name="name" placeholder="Имя котика" > 
+				</div>
+				<div>		
+					<input type="number" name="age" placeholder="Возраст" min="0" max="20">
+				</div>
+				<div>
+					<input type="text" name="image" placeholder="Ссылка на фото">
+				</div>
+				<div class="preview"></div>
+				
+				<div>
+					<label for="favorite">
+						<input type="checkbox" name="favorite">Любимец
+					</label>
+				</div>
 
-    <footer class="container">© 2023 by Sergey Romanenko</footer>
+				<div>
+					<input type="number" name="rate" placeholder="Рейтинг" min="0" max="5">
+				</div>
+					<textarea name="description" placeholder="Описание"></textarea>
+					<button class="save" type="submit">Добавить</button>
+				</form>
+		</div>
+	</div>
+
+    <main class="container"></main>
+	<footer class="container">© 2023 by Sergey Romanenko</footer>
+	
+    <div class="info-block">
+        <div class="info-wrapper">
+
+        </div>
+    </div>
 	
 	<script src="js/function.js"></script>
 	<script src="js/global.js"></script>
 	<script src="script.js"></script>
+	<script src="js/modal.js"></script>
 
 </body>
 </html>
