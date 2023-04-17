@@ -2,9 +2,12 @@ body {
 	margin: 0;
 	font-family: sans-serif;
 }
-h2 {
+h1, h3 {
 	margin: 0;
+}
+h2 {
 	text-align: center;
+	margin-bottom:15px;
 }
 .bi, h1 {
 	font-size: 2rem;
@@ -15,11 +18,11 @@ h2 {
 	transition: 1s;
 }
 header {
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 5px 0 #02bae8;
-    display: flex;
-    padding: 15px calc(50% - 500px);
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 5px 0 #02bae8;
+	display: flex;
+	padding: 30px calc(50% - 500px);
 	text-align: center;
 }
 
@@ -33,24 +36,18 @@ img:hover {
 }
 
 .logo-img {
-    height: 50px;
+	height: 50px;
 }
 .logo-text {
-    font-family: "Comic Sans MS", sans-serif;
-}
-main.container {
-    flex-wrap: wrap;
-    gap: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+	font-family: "Comic Sans MS", sans-serif;
 }
 
 .wrapper {
 	min-height: 100vh;
-    /* background-color: beige; */
+	/* background-color: beige; */
+	max-width: 1020px;
 	padding: 30px;
 	margin: auto;
-	max-width: 1020px;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -59,90 +56,67 @@ main.container {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 18px;
-    align-items: center;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 15px #02bae8, 0 0 5px #0008;
-    position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding-bottom: 18px;
+	align-items: center;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 0 15px #02bae8, 0 0 5px #0008;
+	position: relative;
 }
 .card:hover {
-    transform: scale(1.1, 1.1);
-    transition: 1s linear;
-    box-shadow: 0 0 5px 0 #0006, 0 0 15px 0 #0009;
-}
-
-.card .like {
-    position: absolute;
-    right: 8px;
-    bottom: 6px;
-    color: red;
-    cursor: pointer;
+	transform: scale(1.1, 1.1);
+	transition: 1s linear;
+	box-shadow: 0 0 5px 0 #0006, 0 0 15px 0 red;
 }
 
 .card .pic {
 	height: 250px;
 	width: 100%;
-    background-color: #02bae8;
+	background-color: #02bae8;
 	background-image: url(https://oir.mobi/uploads/posts/2020-01/1579151657_20-35.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
 }
-
-.card__trash {
+.card .default {
+	background-image: url("image/default.png");
+	background-size: contain;
+}
+.card__like {
 	position: absolute;
-	top: 8px;
 	right: 8px;
-	bottom: 8px;
-	cursor: pointer;
-	color: #02bae8;
-}
-.card__trash:hover {
+	bottom: 6px;
 	color: red;
+	cursor: pointer;
 }
 
-.pic.tmp {
-    /* background-image: url(images/default.png); */
-    background-image: url("img/default.png");
-    /* background-size: contain; */
-    background-size: auto 80%;
-}
-button {
-    background: #02bae8;
-    color: #fff;
-    border: 1px;
-	border-radius: 3px;
-    width: 120px;
-    height: 30px;
-}
-button:hover {
-    color: #ffb3bf;
-	font-weight: bold;
+.rating i {
+	color: #fde910;
 }
 .btn {
-    outline: none;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #02bae8;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
+	outline: none;
+	border: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: rgb(11, 178, 255);
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	text-align: center;
 }
 .btn:hover {
-    color: red;
-    transform: scale(1.1, 1.1);
+	color: #02bae8;
+	background-color: red;
 }
 .add {
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-    z-index: 10;
+	position: fixed;
+	bottom: 25px;
+	right: 20px;
+	z-index: 10;
 }
 
 .modal-close {
@@ -150,14 +124,16 @@ button:hover {
 	top: 8px;
 	right: 8px;
 }
+
 .modal-block {
 	background-color: rgba(62, 62, 62, 0.8);
 	backdrop-filter: blur(2px);
 	position: fixed;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
+	left: 0;
+	z-index: 9;
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -165,7 +141,6 @@ button:hover {
 .modal-block.active {
 	display: flex;
 }
-
 .modal {
 	background-color: #fff;
 	padding: 16px;
@@ -182,19 +157,6 @@ form {
 	margin-top: 16px;
 	gap: 8px;
 }
-input, textarea {
-	width: 100%;
-	box-sizing: border-box;
-	height: 30px;
-	border: 2px solid #02bae8;
-	border-radius: 3px;
-	outline: none;
-}
-input[type="checkbox" i] {
-    margin: 5px 10px 5px 0px;
-    width: 15px;
-    height: 15px;
-}
 
 .preview {
 	height: 200px;
@@ -205,9 +167,63 @@ input[type="checkbox" i] {
 	background-size: cover;
 }
 
-footer {
-    display: flex;
-    padding: 30px calc(50% - 500px);
+input,
+textarea {
+	border: 2px solid #02bae8;
+	padding: 6px 8px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	width: 100%;
+}
+textarea {
+	height: 90px;
+}
+input[type="checkbox" i] {
+	margin: 5px 10px 5px 0px;
+	width: 15px;
+	height: 15px;
+}
+label {
+	cursor: pointer;
+	user-select: none;
+}
+
+.saveBtn {
+	border-radius: 6px;
+	width: 120px;
 	text-align: center;
-    box-shadow: 0 0 5px 0 #02bae8;
+}
+
+.btnDelete {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background-color: #fffafa;
+	color: #02bae8;
+	font-size: 10px;
+	text-align: center;
+}
+
+@media (max-width: 720px) {
+	.card__like {
+	font-size: 30px;
+	}
+}
+
+@media (max-width: 520px) {
+	.preview {
+	height: 160px;
+	background-repeat: no-repeat;
+	}
+	.card__like {
+	font-size: 25px;
+	}
+}
+footer {
+	display: flex;
+	padding: 30px calc(50% - 500px);
+	text-align: center;
+	box-shadow: 0 0 5px 0 #02bae8;
 }
